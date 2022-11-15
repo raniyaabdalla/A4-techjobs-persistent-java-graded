@@ -1,13 +1,12 @@
 package org.launchcode.techjobs.persistent.models.data;
 
 import org.launchcode.techjobs.persistent.models.Skill;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
+import javax.transaction.Transactional;
 
-public interface SkillRepository {
-    Optional<Skill> findById(int skillId);
-
-    Object findAll();
-
-    void save(Skill newSkill);
+@Repository
+@Transactional
+public interface SkillRepository extends CrudRepository<Skill, Integer> {
 }

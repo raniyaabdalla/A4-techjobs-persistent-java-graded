@@ -17,6 +17,13 @@ public abstract class AbstractEntity {
     @Size(max =  100)
     private String name;
 
+    protected AbstractEntity(int id) {
+        this.id = id;
+    }
+
+    protected AbstractEntity() {
+    }
+
     public int getId() {
         return id;
     }

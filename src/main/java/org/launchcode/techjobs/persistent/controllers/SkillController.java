@@ -1,6 +1,5 @@
 package org.launchcode.techjobs.persistent.controllers;
 
-
 import org.launchcode.techjobs.persistent.models.Skill;
 import org.launchcode.techjobs.persistent.models.data.SkillRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +17,10 @@ public class SkillController {
 
     @Autowired
     private SkillRepository skillRepository;
+
+    public SkillController(SkillRepository skillRepository) {
+        this.skillRepository = skillRepository;
+    }
 
     @GetMapping("")
     public String index(Model model){
