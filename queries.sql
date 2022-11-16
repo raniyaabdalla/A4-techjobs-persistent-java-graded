@@ -13,3 +13,8 @@
 -- Part 3: Test it with SQL
        DROP TABLE job;
 -- Part 4: Test it with SQL
+         select * from skill
+         Left join job_skills
+         on skill.id = job_skills.skills_id
+         where job_skills.jobs_id is not null
+         order by name asc;

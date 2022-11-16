@@ -2,6 +2,7 @@ package org.launchcode.techjobs.persistent.models;
 
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +10,8 @@ import java.util.List;
 @Entity
 public class Skill extends AbstractEntity {
 
-    @OneToMany(mappedBy = "skills")
+//    @OneToMany(mappedBy = "skills")
+    @ManyToMany(mappedBy = "skills")
     private List<Job> jobs= new ArrayList<>();
     private String description;
     public Skill() {}

@@ -44,7 +44,6 @@ public class EmployerController {
     public String displayViewEmployer(Model model, @PathVariable int employerId) {
 
 
-        /////////////////
         Optional<Employer> optEmployer = employerRepository.findById(employerId);
         if (optEmployer.isEmpty()) {
             return "redirect:../";

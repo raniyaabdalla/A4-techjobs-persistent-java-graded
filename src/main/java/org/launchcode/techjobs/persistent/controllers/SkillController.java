@@ -18,14 +18,14 @@ public class SkillController {
     @Autowired
     private SkillRepository skillRepository;
 
-    public SkillController(SkillRepository skillRepository) {
-        this.skillRepository = skillRepository;
-    }
+//    public SkillController(SkillRepository skillRepository) {
+//        this.skillRepository = skillRepository;
+//    }
 
     @GetMapping("")
     public String index(Model model){
         model.addAttribute("skills",skillRepository.findAll());
-        return "skill/index";
+        return "skills/index";
     }
 
     @GetMapping("add")
